@@ -1,7 +1,7 @@
 ## read table 
 d <-read.table ("household_power_consumption.txt" , sep =";", header = TRUE , 
                 colClasses = c( "Date" = "character" , Time ="character"))
-                ## as.is = TRUE, stringAsFactors = FA
+               
 ## select required records
 xy <- subset(d, as.Date(d$Date, format = "%d/%m/%Y") == '2007-2-1' | 
                as.Date(d$Date, format = "%d/%m/%Y") == '2007-2-2')
