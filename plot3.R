@@ -9,7 +9,7 @@ xy <- subset(d, as.Date(d$Date, format = "%d/%m/%Y") == '2007-2-1' |
 xy <- transform (xy, timestamp= as.character(paste(Date,Time)))
 ## add plots
 plot (as.POSIXct(strptime(xy$timestamp , "%d/%m/%Y %H:%M:%S")) , as.numeric(as.character(xy$Sub_metering_1 )) 
-      , type = "l" , ylab = "Energy sub metering", xlab = "" , col = "black")
+      , type = "l" , ylab = "Energy sub metering", xlab = "" , col = "black" , cex.lab = 0.8)
 
 lines (as.POSIXct(strptime(xy$timestamp , "%d/%m/%Y %H:%M:%S")) , as.numeric(as.character(xy$Sub_metering_2 )) 
       , type = "l" , ylab = "Energy sub metering", xlab = "" , col = "red" )
